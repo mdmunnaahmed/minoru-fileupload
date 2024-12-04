@@ -390,3 +390,142 @@ body {
     font-size: 20px;
   }
 }
+@media (max-width: 575px) {
+  .logo-header {
+    padding-inline: 20px;
+    margin-bottom: 10px;
+  }
+  .main-wrapper {
+    padding-bottom: 40px;
+  }
+  .main-wrapper-inner {
+    padding: 24px 20px;
+  }
+  .main-wrapper-inner .main-title {
+    font-size: 32px;
+  }
+  .drop-zone {
+    margin-bottom: 20px;
+    padding: 24px;
+  }
+  .drop-zone .text1 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .drop-zone .text2 {
+    font-size: 14px;
+    color: #757575;
+    margin-bottom: 30px;
+  }
+  .drop-zone .text3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  .drop-zone .file-up-btn {
+    margin-top: 30px;
+    margin-inline: auto;
+    font-size: 15px;
+  }
+  .drop-zone .file-up-btn svg {
+    width: 18px !important;
+  }
+  .form-group {
+    flex-direction: column;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .form-group label {
+    flex-shrink: 0;
+    font-size: 15px;
+    display: block;
+    min-width: 150px;
+    font-weight: bold;
+  }
+  .form-control {
+    height: 44px;
+    font-size: 16px;
+  }
+  .file-upload-form {
+    margin-top: 25px;
+  }
+  .file-upload-form hr {
+    margin-block: 15px;
+  }
+  .copy-input-div {
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+  .copy-input-div label {
+    margin-bottom: 12px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .copy-input-div input {
+    outline: none !important;
+  }
+  .table-container {
+    overflow: auto;
+  }
+  #data-table-one {
+    overflow: visible;
+  }
+  #data-table-one thead {
+    background-color: transparent;
+  }
+  #data-table-one tbody tr {
+    padding: 10px;
+  }
+  #data-table-one tr {
+    display: block;
+    position: relative;
+    padding-inline: 0 !important;
+  }
+  #data-table-one tr .copy-button {
+    position: absolute;
+    right: 0px;
+    top: 15px;
+    font-size: 12px;
+    min-height: 28px;
+    min-width: 55px;
+  }
+  #data-table-one tr .delete-button {
+    position: absolute;
+    right: 0px;
+    top: 50px;
+    font-size: 12px;
+    min-height: 28px;
+    min-width: 55px;
+  }
+  #data-table-one tr .delete-button svg {
+    width: 12px !important;
+  }
+  #data-table-one tr th {
+    background-color: #faf9f8;
+    padding: 10px;
+    font-size: 14px;
+  }
+  #data-table-one tr th:nth-child(1) {
+    width: 100%;
+    display: block;
+  }
+  #data-table-one tr th:nth-child(2), #data-table-one tr th:nth-child(3) {
+    display: none;
+  }
+  #data-table-one tr td {
+    padding: 3px 0;
+  }
+  #data-table-one tr td:nth-child(1) {
+    display: block;
+    font-size: 16px;
+  }
+  #data-table-one tr td:nth-child(2) {
+    display: block;
+    font-size: 13px;
+    max-width: 75%;
+  }
+  #data-table-one tr td:nth-child(3) {
+    display: block;
+    font-size: 14px;
+  }
+}
