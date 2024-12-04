@@ -403,6 +403,7 @@ h3 {
   }
   .main-wrapper {
     padding-bottom: 40px;
+    padding-inline: 20px;
   }
   .main-wrapper-inner {
     padding: 24px 20px;
@@ -492,7 +493,7 @@ h3 {
       padding-inline: 0 !important;
       .copy-button {
         position: absolute;
-        right:  0px;
+        right: 0px;
         top: 15px;
         font-size: 12px;
         min-height: 28px;
@@ -500,7 +501,7 @@ h3 {
       }
       .delete-button {
         position: absolute;
-        right:  0px;
+        right: 0px;
         top: 50px;
         font-size: 12px;
         min-height: 28px;
@@ -541,3 +542,404 @@ h3 {
     }
   }
 }
+
+// 2nd page start
+/* General Styling */
+.checkbox-wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+input[type="checkbox"] {
+  display: none; /* Hide the default checkbox */
+}
+
+/* Custom Checkbox */
+label {
+  width: 24px; /* Adjust size */
+  height: 24px;
+  display: inline-block;
+  border: 1px solid #d8d8d8; /* Border color */
+  border-radius: 4px; /* Optional: Rounded corners */
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Checkmark */
+label::after {
+  content: "";
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  width: 12px;
+  height: 5px;
+  border: solid red; /* Checkmark color */
+  border-width: 0 2px 2px 0;
+  transform: translate(-50%, -50%) rotate(-400deg) scale(0);
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+/* Checkbox Hover Effect */
+label:hover {
+  border-color: #888; /* Hover border color */
+}
+
+/* Checked State */
+input[type="checkbox"]:checked + label {
+  border-color: #ccc; /* Optional: Checked border color */
+}
+
+input[type="checkbox"]:checked + label::after {
+  transform: translate(-50%, -50%) rotate(-400deg) scaleX(-1); /* Scale checkmark */
+  opacity: 1;
+}
+
+#data-table-two {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  tr {
+    border-bottom: 1px solid #d8d8d8;
+    td {
+      padding: 16px 0;
+      b {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+#data-table-three {
+  margin-top: 20px;
+  .checkbox-wrapper {
+    label {
+      width: 18px;
+      height: 18px;
+      &::after {
+        width: 7px;
+        height: 3px;
+        top: 48%;
+      }
+    }
+  }
+  tr {
+    // border-bottom: 1px solid #d8d8d8;
+    th {
+      padding: 16px;
+      &:last-child {
+        width: 256px;
+      }
+    }
+    td {
+      padding: 16px 15px;
+      &:last-child {
+        text-align: right;
+        .flex {
+          justify-content: flex-end;
+        }
+      }
+      .button-red {
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+      .flex {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      b {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.zip-file-download-area {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  .info {
+    font-size: 14px;
+    color: #757575;
+    max-width: 350px;
+  }
+  > * {
+    flex-shrink: 0;
+  }
+}
+.button-red {
+  padding: 12px 20px;
+  background-color: #e94b0a;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  &:hover {
+    background-color: #db4214;
+  }
+}
+.button-outline {
+  padding: 8px 16px;
+  background-color: transparent;
+  font-weight: bold;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid #d8d8d8;
+  font-weight: bold;
+  &:hover {
+    background-color: #d8d8d8;
+  }
+}
+
+@media (max-width: 991px) {
+  .zip-file-download-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;
+    .info {
+      font-size: 20px;
+      color: #757575;
+      max-width: 100%;
+      order: 5;
+    }
+    .button-red {
+      font-size: 24px;
+    }
+    .button-outline {
+      margin-inline-start: auto;
+      font-size: 24px;
+    }
+    > * {
+      flex-shrink: 1;
+    }
+  }
+  #data-table-two {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    tr {
+      border-bottom: 1px solid #d8d8d8;
+      display: block;
+      padding-block: 20px;
+      td {
+        padding: 6px 0;
+        display: block;
+        font-size: 26px;
+        b {
+          font-size: 26px;
+        }
+      }
+    }
+  }
+  .checkbox-wrapper label {
+    width: 32px;
+    height: 32px;
+  }
+  #data-table-three {
+    margin-top: 20px;
+    .checkbox-wrapper label {
+      width: 24px;
+      height: 24px;
+      &::after {
+        width: 10px;
+        height: 4px;
+      }
+    }
+    thead {
+      border: none;
+      tr {
+        border-bottom: 1px solid #d8d8d8;
+      }
+    }
+    tr {
+      display: flex;
+      width: 100%;
+      position: relative;
+      justify-content: space-between;
+
+      th {
+        font-size: 24px;
+        display: block;
+        position: relative;
+        border: none;
+        &:nth-child(2) {
+          display: none;
+        }
+      }
+      td {
+        padding: 16px 15px 20px;
+        display: block;
+        width: 50%;
+        font-size: 24px;
+        &:last-child {
+          text-align: right;
+          .flex {
+            justify-content: flex-end;
+          }
+        }
+        .size {
+          position: absolute;
+          left: 50px;
+          top: 45px;
+          display: inline-block;
+          font-size: 16px;
+        }
+        .button-red {
+          padding: 4px 10px;
+          border-radius: 4px;
+          font-size: 22px;
+          svg {
+            width: 16px !important;
+            height: auto !important;
+          }
+        }
+        .flex {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+        }
+        b {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
+  .main-wrapper {
+    .main-title {
+      font-size: 28px;
+    }
+  }
+  .zip-file-download-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;
+    .info {
+      font-size: 16px;
+      color: #757575;
+      max-width: 100%;
+      order: unset;
+    }
+    .button-red {
+      font-size: 16px;
+    }
+    .button-outline {
+      margin-inline-start: 0;
+      font-size: 15px;
+    }
+    > * {
+      flex-shrink: 1;
+    }
+  }
+  #data-table-two {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    tr {
+      border-bottom: 1px solid #d8d8d8;
+      display: block;
+      padding-block: 10px;
+      td {
+        padding: 3px 0;
+        display: block;
+        font-size: 16px;
+        b {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .checkbox-wrapper label {
+    width: 24px;
+    height: 24px;
+  }
+  #data-table-three {
+    margin-top: 20px;
+    .checkbox-wrapper label {
+      width: 18px;
+      height: 18px;
+      transform: translateY(4px);
+      &::after {
+        width: 8px;
+        height: 3px;
+      }
+    }
+    thead {
+      border: none;
+      tr {
+        border-bottom: 1px solid #d8d8d8;
+      }
+    }
+    tr {
+      display: flex;
+      width: 100%;
+      position: relative;
+      justify-content: space-between;
+
+      th {
+        font-size: 14px;
+        display: block;
+        position: relative;
+        border: none;
+        &:nth-child(2) {
+          display: none;
+        }
+      }
+      td {
+        padding: 16px 0 20px;
+        display: block;
+        width: 50%;
+        font-size: 14px;
+        &:last-child {
+          text-align: right;
+          .flex {
+            justify-content: flex-end;
+          }
+        }
+        .size {
+          position: absolute;
+          left: 30px;
+          top: 40px;
+          display: inline-block;
+          font-size: 13px;
+        }
+        .button-red {
+          padding: 4px 10px;
+          border-radius: 4px;
+          font-size: 13px;
+          svg {
+            width: 12px !important;
+            height: auto !important;
+          }
+        }
+        .flex {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+        }
+        b {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+// 2nd page end
